@@ -25,7 +25,7 @@ const Navbar = () => {
     };
   }, []);
   return (
-    <header className='relative sticky top-0 z-50 py-2 bg-background/60 backdrop-blur'>
+    <header className='relative sticky top-0 z-50 py-2 bg-background/60 backdrop-blur' data-aos="fade-down" data-aos-delay="100">
       <div className='container mx-auto px-8 flex items-center justify-between w-10/12'>
         <a href="/" className='text-xl font-black uppercase'>Chronos</a>
         <nav className='flex items-center gap-12'>
