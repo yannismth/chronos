@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react/jsx-sort-props */
 import type { AppProps } from "next/app";
 import "../styles/globals.css"; // Importation des styles globaux
 import Navbar from "@/components/navbar"; // Importation de la navbar
