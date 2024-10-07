@@ -1,10 +1,11 @@
 import { Chip } from "@nextui-org/chip";
+import { Accordion, AccordionItem } from "@nextui-org/accordion";
+
 import { Button } from "@/components/ui/button";
 import Analytics from "@/components/analytics";
 import Team from "@/components/team";
 import Flash from "@/components/flash";
 import { Switch } from "@/components/ui/switch";
-import { Accordion, AccordionItem } from "@nextui-org/accordion";
 
 const problems = [
   {
@@ -188,7 +189,7 @@ const Home = () => {
               className="border rounded-lg"
             />
           </div>
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-background via-background to-transparent lg:h-2/4"></div>
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-background via-background to-transparent lg:h-2/4" />
         </div>
       </section>
 
@@ -250,7 +251,7 @@ const Home = () => {
                   alt="dashboard"
                   className={`${index === 2 ? "w-[100%] h-[30%] ml-20" : ""}`}
                 />
-                <div className="absolute bottom-0 left-0 h-40 w-full bg-gradient-to-t from-neutral-50 dark:from-neutral-900 pointer-events-none"></div>
+                <div className="absolute bottom-0 left-0 h-40 w-full bg-gradient-to-t from-neutral-50 dark:from-neutral-900 pointer-events-none" />
               </div>
             ))}
           </div>

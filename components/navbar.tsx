@@ -1,6 +1,7 @@
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
+
 const navlinks = ["Features", "Solutions", "Pricings"];
+
 import { useState, useEffect } from "react";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,6 +22,7 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <header
       className="relative sticky top-0 z-50 py-2 bg-background/60 backdrop-blur"
@@ -35,7 +37,7 @@ const Navbar = () => {
           <ul className="flex gap-10">
             {navlinks.map((navlinks, index) => (
               <li key={index}>
-                <a href="">{navlinks}</a>
+                <a href="/">{navlinks}</a>
               </li>
             ))}
           </ul>

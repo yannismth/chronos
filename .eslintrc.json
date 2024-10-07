@@ -46,6 +46,7 @@
     "unused-imports/no-unused-imports": "warn",
     "react/no-unescaped-entities": "off",  // Désactivation de la règle
     "react/jsx-sort-props": "off",  // Désactivation de la règle
+    "@next/next/no-page-custom-font": "off",
     "react/self-closing-comp": "off",
     "import/order": "off",
     "padding-line-between-statements": "off",

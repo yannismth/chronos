@@ -41,6 +41,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^14.2.14",
     "@types/aos": "^3.0.7",
     "@types/node": "20.5.7",
     "@types/react": "18.3.3",
@@ -63,7 +64,7 @@
     "typescript": "5.0.4"
   },
   "rules": {
-  "react/no-unescaped-entities": "off",
-  "react/jsx-sort-props": "off"
+    "react/no-unescaped-entities": "off",
+    "react/jsx-sort-props": "off"
   }
 }
