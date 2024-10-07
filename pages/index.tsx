@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button"
 import Analytics from '@/components/analytics'
 import Team from '@/components/team'
 import Flash from '@/components/flash'
+import { Switch } from "@/components/ui/switch"
+import {Accordion, AccordionItem} from "@nextui-org/accordion";
 
 const problems = [
   {
@@ -81,6 +83,44 @@ const features = [
     subtitle: "Motivate your team by recognizing top performers and rewarding them with badges, keeping morale high and encouraging productivity.",
     icon: "/recognition.svg" // Icône de reconnaissance des employés
   }
+];
+const pricingPlans = [
+  {
+    title: "Starter",
+    price: "0€",
+    description: "Parfait pour les petites équipes qui démarrent.",
+    features: [
+      "Gestion de 3 utilisateurs maximum",
+      "Suivi de productivité basique",
+      "Accès aux rapports mensuels",
+      "Support client via la communauté",
+    ],
+  },
+  {
+    title: "Pro",
+    price: "29€",
+    description: "Idéal pour les équipes en pleine croissance.",
+    features: [
+      "Gestion jusqu'à 20 utilisateurs",
+      "Suivi de productivité en temps réel",
+      "Accès aux rapports hebdomadaires",
+      "Intégration avec Google Calendar et Slack",
+      "Support client prioritaire par email",
+    ],
+  },
+  {
+    title: "Premium",
+    price: "99€",
+    description: "Pour les entreprises qui veulent optimiser chaque aspect de leur gestion.",
+    features: [
+      "Utilisateurs illimités",
+      "Rapports personnalisés en temps réel",
+      "Automatisation complète des tâches",
+      "Suivi avancé des performances",
+      "Intégrations premium (Trello, Asana, Zapier)",
+      "Support client 24/7 avec un gestionnaire dédié",
+    ],
+  },
 ];
 const Home = () => {
     return <>
@@ -181,6 +221,89 @@ const Home = () => {
             ))}
           </div>
           <img src="dashboard.png" alt="das" width={1152} height={1000} className="border rounded-lg p-2 mx-auto"/>
+        </div>
+      </section>
+      <section>
+        <div className="text-center pt-32 pb-16">
+          <p className="mb-6 text-sm uppercase">Pricing</p>
+          <h1 className="mb-6 text-5xl font-semibold">Choose the plan that's right for you</h1>
+          <div className="flex gap-4 justify-center">
+            <p>Monthly</p>
+            <Switch />
+            <p>Yearly</p>
+          </div>
+        </div>
+        <div className="container mx-auto w-full h-auto py-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((pricingPlan, index) => (
+              <div
+                key={index}
+                className="border rounded-lg p-6 flex flex-col justify-between h-full"
+              >
+                <div className="text-center mb-6">
+                  <p className="text-2xl font-semibold mb-2">{pricingPlan.title}</p>
+                  <p className="text-xl font-bold">
+                    <span>{pricingPlan.price}</span>
+                    <span className="text-sm font-normal">/ Monthly</span>
+                  </p>
+                  <p className="text-gray-500 mt-2">{pricingPlan.description}</p>
+                </div>
+
+                <ul className="mt-6 mb-6 flex flex-col gap-2">
+                  {pricingPlan.features.map((feature, idx) => (
+                    <li key={idx} className="text-sm text-gray-600 flex gap-4">
+                      <img src="/check.svg" alt="" width={20} height={20}/> {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="text-center">
+                  <Button
+                    className="w-full my-2"
+                    variant={index === 1 ? "default" : "outline"}
+                  >
+                    Subscribe
+                  </Button>
+                  <p className="text-gray-400 text-sm mt-2">
+                    Perfect for individuals and small projects
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="text-center pt-20 pb-12">
+          <p className="mb-8 text-sm uppercase">faq</p>
+          <h1 className="mb-8 text-5xl font-semibold">Frequently asked questions</h1>
+        </div>
+        <div className="w-6/12 mx-auto">
+          <Accordion>
+            <AccordionItem key="1" aria-label="Accordion 1" title="Comment puis-je suivre la productivité de mes employés en temps réel ?">
+              Grâce à notre tableau de bord intuitif, vous pouvez suivre en temps réel les heures de travail, les tâches complétées et les statuts des employés. Des rapports détaillés vous aident également à analyser la productivité et les performances de chaque membre de l'équipe.
+            </AccordionItem>
+            <AccordionItem key="2" aria-label="Accordion 2" title="Quels types de rapports puis-je générer avec la plateforme ?">
+              Vous pouvez générer des rapports personnalisés pour suivre la productivité de vos équipes, comparer les performances entre employés et analyser les données sur une base hebdomadaire, mensuelle ou en temps réel.
+            </AccordionItem>
+            <AccordionItem key="3" aria-label="Accordion 3" title="Puis-je personnaliser les fonctionnalités selon mes besoins ?">
+              Oui, notre plateforme est entièrement personnalisable. Vous pouvez adapter le tableau de bord, les rapports, et même les statuts des employés selon les spécificités de votre entreprise.
+            </AccordionItem>
+            <AccordionItem key="4" aria-label="Accordion 4" title="Quels sont les outils intégrés à la plateforme ?">
+              Notre plateforme s'intègre facilement avec des outils de communication tels que Slack et Microsoft Teams, ainsi qu'avec des calendriers comme Google Calendar, pour une gestion centralisée et fluide.
+            </AccordionItem>
+            <AccordionItem key="5" aria-label="Accordion 5" title="Est-ce que je peux automatiser certaines tâches ?">
+              Oui, la plateforme permet d'automatiser des tâches répétitives, comme les rappels de tâches, les notifications de statut ou la génération de rapports périodiques, pour vous faire gagner du temps et améliorer l'efficacité.
+            </AccordionItem>
+          </Accordion>
+          <p className="text-center mt-12">Still have questions? Email us at <span className="underline">yannis.mthpro@gmail.com</span></p>
+        </div>
+      </section>
+      <section>
+        <div className="text-center bg-neutral-100 py-32 my-20">
+          <p className="mb-8 text-sm uppercase">Ready to get started</p>
+          <h1 className="mb-8 text-5xl font-semibold">Start your free trial today.</h1>
+          <Button>Get started for free <img src="/arrowr.svg" alt="" width={20} height={20} className="ml-2"/></Button>
         </div>
       </section>
   </>
