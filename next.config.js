@@ -2,6 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   transpilePackages: ["geist"],
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
