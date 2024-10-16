@@ -141,198 +141,199 @@ const pricingPlans = [
 const Home = () => {
   return (
     <>
-      <section id="hero" data-aos="fade-in" data-aos-delay="100">
-        <div className="w-6/12 container mx-auto text-center py-32">
-          <Chip
-            color="primary"
-            variant="dot"
-            className="mb-6"
-            data-aos="fade-right"
-            data-aos-delay="400"
-          >
-            Website under development...
-          </Chip>
-          <h1
-            className="text-6xl font-semibold mb-6"
-            data-aos="fade-left"
-            data-aos-delay="600"
-          >
-            Streamline Your Business Management
-          </h1>
-          <p
-            className="text-lg mb-6"
-            data-aos="fade-right"
-            data-aos-delay="800"
-          >
-            Optimize tasks, track performance, and empower <br /> your team with
-            our all-in-one management platform.
-          </p>
-          <Button className="mb-6" data-aos="fade-left" data-aos-delay="1000">
-            Get Started for Free
-          </Button>
-          <p className="text-sm" data-aos="fade-up" data-aos-delay="1200">
-            7 day free trial. No credit card required.
-          </p>
-        </div>
-
-        <div
-          className="w-full relative"
-          data-aos="fade-up"
-          data-aos-delay="1400"
+    <section id="hero" data-aos="fade-in" data-aos-delay="100" className="">
+      <div className="w-11/12 sm:w-10/12 md:w-8/12 lg:w-6/12 container mx-auto text-center py-12 sm:py-16 md:py-24 lg:py-32">
+        <Chip
+          color="primary"
+          variant="dot"
+          className="mb-3 sm:mb-4 md:mb-6"
+          data-aos="fade-right"
+          data-aos-delay="400"
         >
-          <div className="p-2 shadow-[0px_-18px_22px_rgba(0,0,0,0.1)] border rounded-lg w-6/12 mx-auto">
-            <img
-              src="/dashboardscreen.png"
-              alt="hero dashboardscreen"
-              width={1000}
-              height={600}
-              className="border rounded-lg"
-            />
-          </div>
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-background via-background to-transparent lg:h-2/4" />
-        </div>
-      </section>
+          Website under development...
+        </Chip>
+        <h1
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-3 sm:mb-4 md:mb-6"
+          data-aos="fade-left"
+          data-aos-delay="600"
+        >
+          Streamline Your Business Management
+        </h1>
+        <p
+          className="text-sm sm:text-base md:text-lg mb-3 sm:mb-4 md:mb-6"
+          data-aos="fade-right"
+          data-aos-delay="800"
+        >
+          Optimize tasks, track performance, and empower <br /> your team with our
+          all-in-one management platform.
+        </p>
+        <Button
+          className="mb-3 sm:mb-4 md:mb-6"
+          data-aos="fade-left"
+          data-aos-delay="1000"
+        >
+          Get Started for Free
+        </Button>
+        <p className="text-xs sm:text-sm" data-aos="fade-up" data-aos-delay="1200">
+          7 day free trial. No credit card required.
+        </p>
+      </div>
 
-      {/* Problem section */}
-      <section id="problem" className="w-full" data-aos="fade-up">
-        <div>
-          <div className="text-center">
-            <p className="mb-2 uppercase">Problem</p>
-            <h1 className="text-5xl font-semibold">
-              Overcoming Common Obstacles in Business Management
-            </h1>
-          </div>
-          <div
-            className="grid grid-cols-3 justify-center w-9/12 mx-auto py-20"
-            data-aos="zoom-in"
-          >
-            {problems.map((problems, index) => (
-              <div key={index} className="p-4 flex flex-col gap-4">
-                <div className="rounded-full bg-[#F3F3F3] w-[50px] p-2">
-                  {problems.icon}
-                </div>
-                <h1 className="font-semibold text-xl">{problems.title}</h1>
-                <p className="text-muted-foreground">{problems.subtitle}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Solutions */}
-      <section id="solutions" data-aos="fade-in">
-        <div className="bg-neutral-100">
-          <div className="text-center">
-            <p className="mb-8 text-sm pt-8 uppercase">Solutions</p>
-            <h1 className="mb-8 text-5xl font-semibold">
-              Optimize Team Productivity and Real-Time Management
-            </h1>
-            <p className="text-slate-600 text-lg">
-              Our intuitive solution lets you track employee performance, manage
-              statuses, and recognize <br /> efforts to unlock your team's full
-              potential and drive business success.
-            </p>
-          </div>
-          <div
-            className="grid grid-cols-3 w-6/12 mx-auto gap-4 py-20"
-            data-aos="fade-up"
-          >
-            {solutions.map((solutions, index) => (
-              <div
-                key={index}
-                className={`border p-4 rounded-md bg-neutral-50 h-2/12 relative overflow-hidden ${
-                  index === 2 ? "row-span-2" : index === 3 && "col-span-2"
-                }`}
-              >
-                <h1 className="font-semibold mb-2">{solutions.title}</h1>
-                <p className="mb-8">{solutions.subtitle}</p>
-                <img
-                  src={solutions.screen}
-                  alt="dashboard"
-                  className={`${index === 2 ? "w-[100%] h-[30%] ml-20" : ""}`}
-                />
-                <div className="absolute bottom-0 left-0 h-40 w-full bg-gradient-to-t from-neutral-50 dark:from-neutral-900 pointer-events-none" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Steps */}
-      <section id="howitswork" data-aos="fade-up">
-        <div className="py-20 text-center">
-          <p className="mb-8 text-sm uppercase">How it's works</p>
-          <h1 className="mb-8 text-5xl font-semibold">
-            Just 3 step to get started
-          </h1>
-        </div>
-        <div className="container mx-auto px-12">
-          <div className="flex flex-row justify-around items-center py-8">
-            <div className="flex flex-col items-center gap-12">
-              {steps.map((steps, index) => (
-                <div
-                  key={index}
-                  className="flex flex-row w-[500px] gap-6"
-                  data-aos="fade-right"
-                >
-                  <img src={steps.icon} alt="icones" width={30} height={30} />
-                  <div>
-                    <button className="text-start">
-                      <h1 className="text-xl font-semibold">{steps.title}</h1>
-                      <p className="text-sm">{steps.subtitle}</p>
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div data-aos="fade-left">
-              <img
-                src="dashboard.png"
-                alt="dash"
-                width={630}
-                height={630}
-                className="border rounded-lg p-2 shadow-sm"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features */}
-      <section id="features" data-aos="zoom-in">
-        <div className="text-center pt-20 pb-12">
-          <p className="mb-8 text-sm uppercase">Features</p>
-          <h1 className="mb-8 text-5xl font-semibold">
-            Powerful Features to Boost Your Team's Productivity
-          </h1>
-        </div>
-        <div className="flex flex-col gap-20 w-8/12 mx-auto">
-          <div className="flex gap-6">
-            {features.map((features, index) => (
-              <div key={index} className="text-center flex flex-col gap-4">
-                <div className="bg-[#F3F3F3] w-[45px] p-2 rounded-full mx-auto">
-                  <img
-                    src={features.icon}
-                    alt="icons"
-                    width={100}
-                    height={100}
-                  />
-                </div>
-                <h1 className="font-semibold text-xl">{features.title}</h1>
-                <p>{features.subtitle}</p>
-                <hr className="h-[2px] rounded-full bg-neutral-300/50" />
-              </div>
-            ))}
-          </div>
+      <div className="w-full relative" data-aos="fade-up" data-aos-delay="1400">
+        <div className="p-2 shadow-[0px_-18px_22px_rgba(0,0,0,0.1)] border rounded-lg w-10/12 sm:w-9/12 md:w-8/12 lg:w-6/12 mx-auto">
           <img
-            src="dashboard.png"
-            alt="das"
-            width={1152}
-            height={1000}
-            className="border rounded-lg p-2 mx-auto"
+            src="/dashboardscreen.png"
+            alt="hero dashboardscreen"
+            className="border rounded-lg w-full h-auto"
           />
         </div>
-      </section>
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 sm:h-1/2 bg-gradient-to-t from-background via-background to-transparent lg:h-2/4"></div>
+      </div>
+    </section>
+
+
+{
+  /* Problem section */
+}
+    <section id="problem" className="w-full" data-aos="fade-up">
+      <div>
+        <div className="text-center px-4 sm:px-6">
+          <p className="mb-2 uppercase text-sm sm:text-base">Problem</p>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold">
+            Overcoming Common Obstacles in Business Management
+          </h1>
+        </div>
+        <div
+          className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-8 justify-items-center w-full lg:w-9/12 mx-auto py-8 sm:py-10 md:py-20"
+          data-aos="zoom-in"
+        >
+          {problems.map((problem, index) => (
+            <div key={index} className="p-4 flex flex-col items-center gap-4 text-center">
+              <div className="rounded-full bg-[#F3F3F3] w-[35px] sm:w-[40px] md:w-[50px] p-2 mx-auto">
+                {problem.icon}
+              </div>
+              <h1 className="font-semibold text-base sm:text-lg md:text-xl">{problem.title}</h1>
+              <p className="text-sm sm:text-base text-muted-foreground sm:w-8/12">{problem.subtitle}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+{
+  /* Solutions */
+}
+    <section id="solutions" data-aos="fade-in">
+      <div className="bg-neutral-100">
+        <div className="text-center px-4 sm:px-6">
+          <p className="mb-4 md:mb-8 text-xs sm:text-sm pt-4 md:pt-8 uppercase">Solutions</p>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-8">
+            Optimize Team Productivity and Real-Time Management
+          </h1>
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-slate-600">
+            Our intuitive solution lets you track employee performance, manage
+            statuses, and recognize <br className="hidden md:inline" /> efforts to
+            unlock your team's full potential and drive business success.
+          </p>
+        </div>
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full sm:w-11/12 md:w-8/12 lg:w-6/12 mx-auto py-10 md:py-20"
+          data-aos="fade-up"
+        >
+          {solutions.map((solution, index) => (
+            <div
+            key={index}
+            className={`border p-4 rounded-md bg-neutral-50 h-auto relative overflow-hidden ${
+              index === 2 ? "md:col-span-2 lg:col-span-1 lg:row-span-2" : index === 3 && "col-span-2"
+            }`}
+          >
+              <h1 className="font-semibold text-base sm:text-lg mb-2">{solution.title}</h1>
+              <p className="text-xs sm:text-sm md:text-base mb-8">{solution.subtitle}</p>
+              <img
+                src={solution.screen}
+                alt="dashboard"
+                className={`${index === 2 ? "w-full h-[30%] sm:h-full" : ""}`}
+              />
+              <div className="absolute bottom-0 left-0 h-40 w-full bg-gradient-to-t from-neutral-50 dark:from-neutral-900 pointer-events-none" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+{
+  /* Steps */
+}
+    <section id="howitswork" data-aos="fade-up">
+      <div className="py-8 md:py-16 text-center">
+        <p className="mb-4 md:mb-8 text-xs sm:text-sm uppercase">How it works</p>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-8">
+          Just 3 steps to get started
+        </h1>
+      </div>
+      <div className="container mx-auto px-4 sm:px-2 md:px-12">
+        <div className="flex flex-col md:flex-row justify-around items-center py-6 sm:py-8 md:py-12">
+          <div className="flex flex-col items-center gap-8 md:gap-12 w-full md:w-auto">
+            {steps.map((step, index) => (
+              <div
+                key={index}
+                className="flex flex-row w-full sm:w-[400px] md:w-[500px] gap-4 sm:gap-6"
+                data-aos="fade-right"
+              >
+                <img src={step.icon} alt="icon" width={30} height={30} />
+                <div>
+                  <button className="text-start">
+                    <h1 className="text-base sm:text-lg md:text-xl font-semibold">
+                      {step.title}
+                    </h1>
+                    <p className="text-xs sm:text-sm">{step.subtitle}</p>
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div data-aos="fade-left" className="mt-8 md:mt-0 w-full md:w-auto">
+            <img
+              src="dashboard.png"
+              alt="dashboard"
+              className="w-full sm:w-[500px] md:w-[630px] h-auto border rounded-lg p-2 shadow-sm"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+{
+  /* Features */
+}
+<section id="features" data-aos="zoom-in">
+  <div className="text-center pt-10 md:pt-20 pb-12">
+    <p className="mb-4 md:mb-8 text-sm uppercase">Features</p>
+    <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-8">
+      Powerful Features to Boost Your Team's Productivity
+    </h1>
+  </div>
+  <div className="flex flex-col gap-10 md:gap-20 w-full md:w-8/12 mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {features.map((features, index) => (
+        <div key={index} className="text-center flex flex-col gap-4">
+          <div className="bg-[#F3F3F3] w-[40px] md:w-[45px] p-2 rounded-full mx-auto">
+            <img src={features.icon} alt="icons" className="w-full h-auto" />
+          </div>
+          <h1 className="font-semibold text-lg md:text-xl">{features.title}</h1>
+          <p>{features.subtitle}</p>
+          <hr className="h-[2px] rounded-full bg-neutral-300/50" />
+        </div>
+      ))}
+    </div>
+    <img
+      src="dashboard.png"
+      alt="das"
+      className="border rounded-lg p-2 w-full h-auto mx-auto"
+    />
+  </div>
+</section>
+
 
       {/* Pricing */}
       <section id="pricing" data-aos="fade-up">
